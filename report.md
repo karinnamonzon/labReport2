@@ -3,14 +3,14 @@
 
 Creating a web server uses two other files, an interface called URLHandler and a class called Server. 
 
-`URLHandler`
+`URLHandler.java`
 ```
 interface URLHandler {
   String processRequest(URI uri);
 }
 ```
 
-`Server`
+`Server.java`
 ```
 static void start(int port, URLHandler handler) { ... }
 ```
@@ -27,15 +27,22 @@ The handler method implements the function of StringServer based on the path in 
 
 ![StringServer class](https://github.com/karinnamonzon/labReport2/blob/main/StringServerMethod.png?raw=true)
 
+This is the StringServer method that is used to create the local host for the web server. It uses the IOException import in order to throw an exception. A port number from `1024 to 49151` must be entered, if it is not in between then it is an invalid number and would throw an error.
+
 ![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
 
+This is what the local web server looks like when `/add-message?s=Hello` is added to the end of the URL:
 ![`/add-message?s=Hello`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140334.png?raw=true)
 
+This is what the local web server looks like when `/add-message?s=How are you` is added to the end of the URL and after `/add-message?s=Hello` had been added:
 ![`/add-message?s=How are you`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140425.png?raw=true)
+
+It adds a new String to a new line 
 
 # Part 2
 Lab 3 focused on looking at bigs and symptoms from files. One method that had had bugs and synmptoms was `reverseInPlace()` this 
 
+This is an example of a JUnit test for `reverseInPlace()` that results in a failure:
 ```
 @Test
 public void testReverseInPlace() {
@@ -45,6 +52,7 @@ public void testReverseInPlace() {
 }
 ```
 
+This is an example of a JUnit test for `reverseInPlace()` that does not result in a failure:
 ```
 @Test
 public void testReverseInPlace() {
