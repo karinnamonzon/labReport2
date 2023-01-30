@@ -1,4 +1,37 @@
 #Part 1
+##Creating a Web Server
+
+Creating a web server uses two other files, an interface called URLHandler and a class called Server. 
+
+`URLHandler`
+```
+interface URLHandler {
+  String processRequest(URI uri);
+}
+```
+
+`Server`
+```
+static void start(int port, URLHandler handler) { ... }
+```
+
+These will allow the program for the web server in a Java file to run the web server functions.
+
+In this example we will be making a web server called `StringServer`. It will allow us to concatenate Strings to a new line using `/add-message?s=<string>` in the web server path.
+
+There are two methods in the `StringServer.java` that implement the function of the web server.
+
+![Handler Method](https://github.com/karinnamonzon/labReport2/blob/main/handlerMethod.png?raw=true)
+
+The handler method implements the function of StringServer based on the path in the URL.
+
+![StringServer class](https://github.com/karinnamonzon/labReport2/blob/main/StringServerMethod.png?raw=true)
+
+![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
+
+![`/add-message?s=Hello`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140334.png?raw=true)
+
+![`/add-message?s=How are you`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140425.png?raw=true)
 
 #Part 2
 
