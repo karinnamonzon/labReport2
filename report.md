@@ -42,6 +42,17 @@ It adds a new String to a new line
 # Part 2
 Lab 3 focused on looking at bigs and symptoms from files. One method that had had bugs and synmptoms was `reverseInPlace()` this 
 
+This is the original code for `reverseInPlace()` which did not reverse the array correctly:
+```
+static void reverseInPlace(int[] arr) {
+    int[] tempArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      tempArray[0] = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+The following are examples of JUnit tests for `reverseInPlace()`
 This is an example of a JUnit test for `reverseInPlace()` that results in a failure:
 ```
 @Test
@@ -61,6 +72,25 @@ public void testReverseInPlace() {
   assertArrayEquals(new int[]{3}, input1);
 }
 ```
+
+Running these tests results in this:
+![Image](https://github.com/karinnamonzon/labReport2/blob/main/failures.png?raw=true)
+
+This is the new code for `reverseInPlace() ` that fixes the bigs and allows it to reverse an array correctly:
+```
+static void reverseInPlace(int[] arr) {
+    int[] tempArray = new int[arr.length];
+    for(int i = 0; i < arr.length/2; i += 1) {
+      tempArray[0] = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = tempArray[0];
+    }
+  }
+```
+
+With this code and urunning it with the JUnit tests from earlier it produces this:
+![Image](https://github.com/karinnamonzon/labReport2/blob/main/correct.png?raw=true)
+
 
 
 # Part 3
