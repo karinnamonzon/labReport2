@@ -34,6 +34,26 @@ The handler method implements the function of StringServer based on the path in 
 ![`/add-message?s=How are you`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140425.png?raw=true)
 
 # Part 2
+Lab 3 focused on looking at bigs and symptoms from files. One method that had had bugs and synmptoms was `reverseInPlace()` this 
+
+```
+@Test
+public void testReverseInPlace() {
+  int[] input1 = {1, 2, 3, 4};
+  ArrayExamples.reverseInPlace(input1);
+  assertArrayEquals(new int[]{4, 3, 2, 1}, input1);
+}
+```
+
+```
+@Test
+public void testReverseInPlace() {
+  int[] input1 = {3};
+  ArrayExamples.reverseInPlace(input1);
+  assertArrayEquals(new int[]{3}, input1);
+}
+```
+
 
 # Part 3
 
