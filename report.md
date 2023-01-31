@@ -39,12 +39,15 @@ This is what the terminal should look like after those two commands are entered:
 
 
 Opening the link provided and it shows that the web server is online and currently blank because no strings have been added to it.
+
 ![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
 
 This is what the local web server looks like when `/add-message?s=Hello` is added to the end of the URL:
+
 ![`/add-message?s=Hello`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140334.png?raw=true)
 
 This is what the local web server looks like when `/add-message?s=How are you` is added to the end of the URL and after `/add-message?s=Hello` had been added:
+
 ![`/add-message?s=How are you`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140425.png?raw=true)
 
 These two commands called the `handleRequest` method that uses the url path within the argument. This uses the `url.getPath()` in the handler method. The values after the "s" in the url path are saved on the web server. In the second example with `How are you` since there is already existing string, the string is added to the ArrayList in `StringServer` and printed out on a new line. For reference, `%20` in the url is a space character.
