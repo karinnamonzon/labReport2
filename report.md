@@ -31,9 +31,10 @@ This is the StringServer method that is used to create the local host for the we
 
 To put the web server online use the commands
 ```
-
+javac Server.java StringServer.java 
+java NumberServer 4000
 ```
-This is what the terminal should look like:
+This is what the terminal should look like after those two commands are entered:
 ![go online](https://github.com/karinnamonzon/labReport2/blob/main/creating.png?raw=true)
 
 ![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
