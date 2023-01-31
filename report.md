@@ -1,7 +1,7 @@
 # Part 1
 ## Creating a Web Server
 
-Creating a web server uses two other files, an interface called URLHandler and a class called Server. 
+Creating a web server uses two other files, an interface called `URLHandler.java` and a class called `Server.java`. 
 
 `URLHandler.java`
 ```
@@ -28,6 +28,13 @@ The handler method implements the function of StringServer based on the path in 
 ![StringServer class](https://github.com/karinnamonzon/labReport2/blob/main/StringServerMethod.png?raw=true)
 
 This is the StringServer method that is used to create the local host for the web server. It uses the IOException import in order to throw an exception. A port number from `1024 to 49151` must be entered, if it is not in between then it is an invalid number and would throw an error.
+
+To put the web server online use the commands
+```
+
+```
+This is what the terminal should look like:
+![go online](https://github.com/karinnamonzon/labReport2/blob/main/creating.png?raw=true)
 
 ![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
 
