@@ -47,7 +47,7 @@ This is what the local web server looks like when `/add-message?s=Hello` is adde
 This is what the local web server looks like when `/add-message?s=How are you` is added to the end of the URL and after `/add-message?s=Hello` had been added:
 ![`/add-message?s=How are you`](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20140425.png?raw=true)
 
-It adds a new String to a new line 
+These two commands called the `handleRequest` method that uses the url path within the argument. This uses the `url.getPath()` in the handler method. The values after the "s" in the url path are saved on the web server. In the second example with `How are you` since there is already existing string, the string is added to the ArrayList in `StringServer` and printed out on a new line. For reference, `%20` in the url is a space character.
 
 # Part 2
 Lab 3 focused on looking at bigs and symptoms from files. One method that had had bugs and synmptoms was `reverseInPlace()` this 
