@@ -37,6 +37,8 @@ java NumberServer 4000
 This is what the terminal should look like after those two commands are entered:
 ![go online](https://github.com/karinnamonzon/labReport2/blob/main/creating.png?raw=true)
 
+
+Opening the link provided and it shows that the web server is online and currently blank because no strings have been added to it.
 ![Launching StringServer](https://github.com/karinnamonzon/labReport2/blob/main/Screenshot%202023-01-27%20141124.png?raw=true)
 
 This is what the local web server looks like when `/add-message?s=Hello` is added to the end of the URL:
@@ -96,10 +98,10 @@ static void reverseInPlace(int[] arr) {
   }
 ```
 
-With this code and urunning it with the JUnit tests from earlier it produces this:
+With this code and running it with the JUnit tests from earlier it produces this:
 ![Image](https://github.com/karinnamonzon/labReport2/blob/main/correct.png?raw=true)
 
-
+Bugs that were fixed include the iteration length in the for loop where it was changed from `arr.length` to arr.length/2 to precent the array from swapping elements twice. The array swapped firstmost and lastmost elements with each other so changinh the iteration length stopped it from going all the way and ending up with the same array. Another line was added within the for loop `arr[arr.length - i - 1] = tempArray[0];` to store the firstmost elements before being replaced.
 
 # Part 3
 
